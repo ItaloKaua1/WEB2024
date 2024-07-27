@@ -1,0 +1,86 @@
+#homeDiv{
+    background-color: rgb(34, 35, 35);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+}
+
+#homeName{
+    text-align: center;
+    color: white;
+}
+
+.buttonPages{
+    background-color: white;
+    text-align: center;
+    width: 20vw;
+    height: 9vh;
+    left: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+.buttonPages:hover{
+    background-color: black;
+    cursor: pointer;
+    color: white;
+}
+
+#funcoesButton{
+    top:20vh
+}
+
+#lojaButton{
+    top: 30vh;
+}
+
+#galaxiaButton{
+    top: 40vh;
+}
+
+#paiButton{
+    top: 50vh;
+}
+
+#pokemonButton{
+    top: 60vh;
+}
+
+#compAButton{
+    top: 70vh;
+}
+
+#contextButton{
+    top: 80vh;
+}
+
+#pokecontButton{
+    top: 90vh;
+}
+
+#efeitoButton{
+    top: 100vh;
+}
+
+#promessaButton{
+    top: 110vh;
+}
+
+#covidButton{
+    top: 120vh;
+}
+
+#reduxButton{
+    top: 130vh;
+}
+
+#sdataButton{
+    top: 140vh;
+}
+
+
