@@ -10,6 +10,13 @@ const ListarAluno = () => {
                         <td>{aluno.nome}</td>
                         <td>{aluno.curso}</td>
                         <td>{aluno.titulacao}</td>
+                        <td>{aluno.IRA}</td>
+                        <td>
+                        <div>
+                            <button type="button" className="btn btn-secondary">Editar</button>
+                            <button type="button" className="btn btn-danger">Apagar</button>
+                        </div>
+                    </td>
                     </tr>
                 )
             }
@@ -26,6 +33,7 @@ const ListarAluno = () => {
                     <th scope="col">Nome</th>
                     <th scope="col">Curso</th>
                     <th scope="col">Titulação</th>
+                    <th scope="col">IRA</th>
                 </thead>
                 <tbody>
                     {corpoTabela()}
