@@ -1,0 +1,64 @@
+---> QUESTÃO 05
+
+    O que é Prop Drilling?
+        - É quando se tem uma prop, que será acessada por um componente aninhado. Sem o contexto teria que passar essa prop
+        por todos os componentes intermediários, mesmo que eles não não precisem dela, por exemplo:
+
+      // Componente A
+        function A() {
+        const theme = 'dark';
+        return <B theme={theme} />;
+        }
+
+        // Componente B
+        function B({ theme }) {
+        return <C theme={theme} />;
+        }
+
+        // Componente C
+        function C({ theme }) {
+        return <D theme={theme} />;
+        }
+
+        // Componente D
+        function D({ theme }) {
+        return <p>O tema atual é: {theme}</p>;
+        }
+
+Como o uso do contexto ajuda a resolver esse problema?
+    - O Contexto permite que você forneça o valor (theme) diretamente a qualquer componente que precisar dele, sem ter que 
+      passá-lo manualmente por todas as camadas intermediárias, por exemplo:
+
+    import React, { createContext, useContext } from 'react';
+
+        // Criação do contexto
+        const ThemeContext = createContext();
+
+        function A() {
+        const theme = 'dark';
+
+        return (
+            // O valor do tema é fornecido para todos os componentes dentro de ThemeContext.Provider
+            <ThemeContext.Provider value={theme}>
+            <B />
+            </ThemeContext.Provider>
+        );
+        }
+
+        function B() {
+        return <C />;
+        }
+
+        function C() {
+        return <D />;
+        }
+
+        function D() {
+        // D pode acessar diretamente o valor do tema sem receber props
+        const theme = useContext(ThemeContext);
+        return <p>O tema atual é: {theme}</p>;
+}
+
+Vantagens do uso do contexto:
+    - Elimina props drilling
+    - Manutenção mais fácil

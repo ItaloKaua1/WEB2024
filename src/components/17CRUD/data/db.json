@@ -1,0 +1,13 @@
+{
+    "professores": [
+        {"nome": "Fulano", "curso":"ES", "ai": {"es": false, "lc": false, "md": false, "al": false}, "titulacao": "MEST", "universidade":"ufc"},
+        {"nome": "Fulano", "curso":"ES", "ai": {"es": false, "lc": false, "md": false, "al": false}, "titulacao": "MEST", "universidade":"ufc"},
+        {"nome": "Fulano", "curso":"ES", "ai": {"es": false, "lc": false, "md": false, "al": false}, "titulacao": "MEST", "universidade":"ufc"},
+        {"nome": "Fulano", "curso":"ES", "ai": {"es": false, "lc": false, "md": false, "al": false}, "titulacao": "MEST", "universidade":"ufc"},
+        {"nome": "Fulano", "curso":"ES", "ai": {"es": false, "lc": false, "md": false, "al": false}, "titulacao": "MEST", "universidade":"ufc"},
+        {"nome": "Fulano", "curso":"ES", "ai": {"es": false, "lc": false, "md": false, "al": false}, "titulacao": "MEST", "universidade":"ufc"}
+    ],
+    "alunos": [
+
+    ]
+}
