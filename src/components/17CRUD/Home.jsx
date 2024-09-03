@@ -7,7 +7,7 @@ const Home = () => {
         <div>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
-                <a className="navbar-brand" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/_italokaua/">Navbar</a>
+                <a className="navbar-brand" target="_blank" rel="noopener noreferrer" href="/">Navbar</a>
                 <div className="collapse navbar-collapse" id="navabrNav">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
@@ -50,6 +50,27 @@ const Home = () => {
                                 </li>
                             </ul>
                         </li>
+                        
+                        <li className="nav-item dropdown">
+                            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Prova
+                            </a>
+                            <ul className="dropdown-menu">
+                                <li>
+                                    <Link className="dropdown-item" to={"prova/questao01"}>Questao 01</Link>
+                                </li>
+                                <li>
+                                    <Link className="dropdown-item" to={"prova/questao02"}>Questao 02</Link>
+                                </li>
+                                <li>
+                                    <Link className="dropdown-item" to={"prova/questao03"}>Questao 03</Link>
+                                </li>
+                                <li>
+                                    <Link className="dropdown-item" to={"prova/questao04"}>Questao 04</Link>
+                                </li>
+                            </ul>
+                        </li>
+
                     </ul>
                 </div>
             </div>
