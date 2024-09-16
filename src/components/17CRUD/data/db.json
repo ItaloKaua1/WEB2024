@@ -1,13 +1,21 @@
 {
-    "professores": [
-        {"id": 1, "nome": "Fulano", "curso":"ES", "ai": {"es": false, "lc": false, "md": false, "al": false}, "titulacao": "MEST", "universidade":"ufc"},
-        {"id": 2, "nome": "Fulano", "curso":"ES", "ai": {"es": false, "lc": false, "md": false, "al": false}, "titulacao": "MEST", "universidade":"ufc"},
-        {"id": 3, "nome": "Fulano", "curso":"ES", "ai": {"es": false, "lc": false, "md": false, "al": false}, "titulacao": "MEST", "universidade":"ufc"},
-        {"id": 4, "nome": "Fulano", "curso":"ES", "ai": {"es": false, "lc": false, "md": false, "al": false}, "titulacao": "MEST", "universidade":"ufc"},
-        {"id": 5, "nome": "Fulano", "curso":"ES", "ai": {"es": false, "lc": false, "md": false, "al": false}, "titulacao": "MEST", "universidade":"ufc"},
-        {"id": 6, "nome": "Fulano", "curso":"ES", "ai": {"es": false, "lc": false, "md": false, "al": false}, "titulacao": "MEST", "universidade":"ufc"}
-    ],
-    "alunos": [
-
-    ]
+  "professores": [
+    {
+      "id": "e9ed",
+      "nome": "Jefferson",
+      "curso": "Engenharia de Software",
+      "titulacao": "MESTRADO",
+      "ai": {
+        "es": true,
+        "lc": false,
+        "mc": false,
+        "al": false
+      },
+      "universidade": {
+        "ufc": true,
+        "ifce": false
+      }
+    }
+  ],
+  "alunos": []
 }

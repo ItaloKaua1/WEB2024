@@ -1,5 +1,6 @@
 import { useState } from "react"
 import "../css/crud.css"
+import ProfessorService from "../services/ProfessorService"
 
 const CriarProfessor = () => {
 
@@ -21,11 +22,6 @@ const CriarProfessor = () => {
         setTitulacao(event.target.value)
     }
 
-    const handleSubmit = (event) => {
-        event.preventDefault()
-        alert("Nome: "+ nome + "\n Curso: " + curso + "\n Titulacao: "+ titulacao)
-    }
-    
     const handleCheckbox = (event) => {
         setAi(
             {
@@ -41,6 +37,20 @@ const CriarProfessor = () => {
             ...reset,
             [event.target.value]:event.target.checked
         })
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        //alert("Nome: "+ nome + "\n Curso: " + curso + "\n Titulacao: "+ titulacao)
+        const novoProfessor = {nome, curso, titulacao, ai, universidade}
+        //postProfessorAxiosThenCatch(novoProfessor)
+
+        ProfessorService.postProfessorAxiosThenCatch(
+            novoProfessor,
+            (data) => {
+                console.log(data)
+            }
+        )
     }
 
     return (

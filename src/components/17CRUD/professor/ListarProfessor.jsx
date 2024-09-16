@@ -11,17 +11,12 @@ const ListarProfessor = () => {
 
     useEffect(
         () => {
-            //getProfessorAxiosThenCatch()
-            //getProfessorAxiosAssyncAwait()
-            //getProfessorFetchThenCatch()
-            //getProfessorFetchAssyncAwait()
-
+            
             ProfessorService.getProfessorAxiosThenCatch(
                 (data) => {
                     setProfessores(data)
                 }
             )
-
         }
         ,
         []
@@ -36,41 +31,6 @@ const ListarProfessor = () => {
                 }
             )
             .catch(error => console.log(error))
-    }
-
-    const getProfessorAxiosAssyncAwait = async() => {
-
-        try{
-            const response = await axios.get("http://localhost:3001/professores")
-            setProfessores(response.data)
-        }catch(error) {
-            console.log(error)
-        }
-    }
-
-    const getProfessorFetchThenCatch = () => {
-        fetch("http://localhost:3001/professores")
-        .then(
-            (response) => {
-                return response.json()
-            }
-        )
-        .then(
-            (json) => {
-                setProfessores(json)
-            }
-        )
-        .catch(error => console.log(error))
-    }
-
-    const getProfessorFetchAssyncAwait = async () => {
-        try{
-            const response = await fetch("http://localhost:3001/professores")
-            const json = await response.json()
-        setProfessores(json)
-        } catch(error){
-            console.log(error)
-        }
     }
 
     const corpoTabela = () => {
