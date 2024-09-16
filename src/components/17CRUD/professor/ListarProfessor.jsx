@@ -3,6 +3,8 @@ import "../css/crud.css"
 import axios from "axios"
 import { useEffect,  useState } from "react"
 
+import ProfessorService from "../services/ProfessorService"
+
 const ListarProfessor = () => {
 
     const [professores, setProfessores] = useState([])
@@ -12,7 +14,14 @@ const ListarProfessor = () => {
             //getProfessorAxiosThenCatch()
             //getProfessorAxiosAssyncAwait()
             //getProfessorFetchThenCatch()
-            getProfessorFetchAssyncAwait()
+            //getProfessorFetchAssyncAwait()
+
+            ProfessorService.getProfessorAxiosThenCatch(
+                (data) => {
+                    setProfessores(data)
+                }
+            )
+
         }
         ,
         []
