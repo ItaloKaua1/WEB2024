@@ -1,7 +1,27 @@
 import professores from "../data/db_professor"
 import "../css/crud.css"
+import axios from "axios"
+import { useEffect,  useState } from "react"
 
 const ListarProfessor = () => {
+
+    const [professores, setProfessores] = useState([])
+
+    useEffect(
+        () => {
+            axios.get("http://localhost:3001/professores")
+            .then(
+                (response) => {
+                    console.log(response.data)
+                    setProfessores(response.data)
+                }
+            )
+            .catch(error => console.log(error))
+        }
+        ,
+        []
+    )
+
     const corpoTabela = () => {
         const novoArray = professores.map(
             (professor) => {
