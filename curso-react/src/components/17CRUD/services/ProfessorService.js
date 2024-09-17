@@ -15,7 +15,7 @@ class ProfessorService {
     }
 
     static postProfessorAxiosThenCatch = (professor, callback) => {
-        axios.post(url, professor)
+        axios.post(url+"criar", professor)
         .then(
             (response) => {
                 console.log(response)
@@ -26,7 +26,7 @@ class ProfessorService {
     }
 
     static postProfessorFetchThenCatch = (professor, callback) => {
-        fetch(url, {
+        fetch(url+"criar", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(professor),
