@@ -1,5 +1,4 @@
 import "../css/crud.css"
-import axios from "axios"
 import { useEffect,  useState } from "react"
 
 import { Link } from "react-router-dom"
@@ -23,15 +22,15 @@ const ListarProfessor = () => {
         []
     )
 
-    const getProfessorAxiosThenCatch = () => {
-        axios.get("http://localhost:3001/professores")
-            .then(
+    const handleDelete = (id) => {
+        if(window.confirm('Deseja excluir id = ${id}')) {
+            ProfessorService.deleteProfessor(
+                id,
                 (response) => {
-                    //console.log(response.data)
-                    setProfessores(response.data)
+                    alert(response)
                 }
             )
-            .catch(error => console.log(error))
+        }
     }
 
     const corpoTabela = () => {
@@ -51,7 +50,11 @@ const ListarProfessor = () => {
                             >
                                 Editar
                             </Link>
-                                <button type="button" className="btn btn-danger">Apagar</button>
+                                <button 
+                                    type="button" 
+                                    className="btn btn-danger"
+                                    onClick={() => handleDelete(professor.id)}
+                                >Apagar</button>
                             </div>
                         </td>
                     </tr>

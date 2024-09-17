@@ -3,8 +3,6 @@ import ProfessorService from "../services/ProfessorService"
 
 import { useParams, useNavigate } from "react-router-dom"
 
-import axios from "axios"
-
 const EditarProfessor = () => {
 
     const [nome, setNome] = useState("")
@@ -18,18 +16,17 @@ const EditarProfessor = () => {
 
     useEffect(
         () => {
-            axios.get('http://localhost:3001/professores/?id=${id}')
-            .then(
-                (response) => {
-                    const {nome, curso, titulacao, ai, universidade} = response.data[0]
+            ProfessorService.getProfessorById(
+                id,
+                (professor) => {
+                    const {nome, curso, titulacao, ai, universidade} = professor;
                     setNome(nome)
                     setCurso(curso)
-                    setTitulacao(titulacao)
                     setAi(ai)
+                    setTitulacao(titulacao)
                     setUniversidade(universidade)
                 }
             )
-            .catch(error => console.log(error))
         }
         ,
         []
@@ -67,14 +64,13 @@ const EditarProfessor = () => {
     const handleSubmit = (event) => {
         event.preventDefault()
         const professorEditado = {nome, curso, titulacao, ai, universidade}
-        axios.put('http://localhost:3001/professores/${id}', professorEditado)
-        .then(
+        ProfessorService.updateProfessor(
+            id, 
+            professorEditado,
             (response) => {
-                //console.log(response)
                 navigate("/professor/listar")
             }
         )
-        .catch(error => console.log(error))
     }
 
     return (
