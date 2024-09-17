@@ -121,17 +121,6 @@ const CriarProfessor = () => {
                         />
                         <label htmlFor="idMC" className="form-check-label">Matemática Computacional</label>
                     </div>
-                    <div className="form-check">
-                        <input 
-                        type="checkbox" 
-                        id="idAL"
-                        className="form-check-input"
-                        checked={ai.al}
-                        name="al"
-                        onChange={handleCheckbox}
-                        />
-                        <label htmlFor="idAL" className="form-check-label">Lógica Computacional</label>
-                    </div>
                 </fieldset>
                 </div>
 

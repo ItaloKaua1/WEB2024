@@ -1,7 +1,8 @@
-import professores from "../data/db_professor"
 import "../css/crud.css"
 import axios from "axios"
 import { useEffect,  useState } from "react"
+
+import { Link } from "react-router-dom"
 
 import ProfessorService from "../services/ProfessorService"
 
@@ -44,7 +45,12 @@ const ListarProfessor = () => {
                         <td>{professor.titulacao}</td>
                         <td>
                             <div className="button-content">
-                                <button type="button" className="btn btn-primary">Editar</button>
+                            <Link
+                                className="btn btn-primary"
+                                to={`/professor/editar/${professor.id}`}
+                            >
+                                Editar
+                            </Link>
                                 <button type="button" className="btn btn-danger">Apagar</button>
                             </div>
                         </td>
