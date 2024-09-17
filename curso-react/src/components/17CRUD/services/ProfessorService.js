@@ -37,11 +37,11 @@ class ProfessorService {
     }
 
     static getProfessorById = (id, callback) => {
-        axios.get('http://localhost:3001/professores/?id=${id}')
+        axios.get('http://localhost:3002/professores/recuperar/${id}')
             .then(
                 (response) => {
                     //const {nome, curso, titulacao, ai, universidade} = response.data[0]
-                    callback(response.data[0])
+                    callback(response.data)
 
                 }
             )

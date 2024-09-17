@@ -5,7 +5,7 @@ const professores = [
         curso:"ES",
         ai: {es: false, lc: false, md: false, al: false},
         titulacao: "MEST",
-        universidade:"ufc"
+        universidade:{ufc:true, ifce:false}
     },
     {
         id: 1,
@@ -13,7 +13,7 @@ const professores = [
         curso:"ES",
         ai: {es: false, lc: false, md: false, al: false},
         titulacao: "MEST",
-        universidade:"ufc"
+        universidade:{ufc:true, ifce:false}
     },
     {
         id: 2,
@@ -21,7 +21,7 @@ const professores = [
         curso:"ES",
         ai: {es: false, lc: false, md: false, al: false},
         titulacao: "MEST",
-        universidade:"ufc"
+        universidade:{ufc:true, ifce:false}
     },
     {
         id: 3,
@@ -29,7 +29,7 @@ const professores = [
         curso:"ES",
         ai: {es: false, lc: false, md: false, al: false},
         titulacao: "MEST",
-        universidade:"ufc"
+        universidade:{ufc:true, ifce:false}
     },
     {
         id: 4,
@@ -37,7 +37,7 @@ const professores = [
         curso:"ES",
         ai: {es: false, lc: false, md: false, al: false},
         titulacao: "MEST",
-        universidade:"ufc"
+        universidade:{ufc:true, ifce:false}
     }
 ]
 

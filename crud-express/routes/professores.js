@@ -18,4 +18,13 @@ router.post(
     }
 )
 
+router.get(
+    "/recuperar/:id",
+    (request, response, next) => {
+        const id = request.params.id
+        const professor = ProfessorService.recuperar(id)
+        response.json(professor)
+    }
+) 
+
 module.exports = router;
